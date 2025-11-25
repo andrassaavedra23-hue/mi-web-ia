@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ing. Andrés | Telecom Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            /* Fondo tecnológico oscuro */
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .module-card {
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .module-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-left: 3px solid #38bdf8;
+            transform: translateX(5px);
+        }
+
+        /* Clase para asegurar que la foto se vea bien aunque no sea cuadrada */
+        .profile-img {
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center p-4 min-h-screen">
+
+    <!-- Contenedor Principal -->
+    <div class="glass-card w-full max-w-5xl rounded-3xl overflow-hidden flex flex-col md:flex-row fade-in shadow-2xl">
+        
+        <!-- COLUMNA IZQUIERDA: Perfil y Datos -->
+        <div class="w-full md:w-1/3 bg-slate-900/60 p-8 flex flex-col items-center text-center border-b md:border-b-0 md:border-r border-white/10 relative">
+            
+            <!-- Logo Empresa (Parte Superior) -->
+            <div class="mb-6 w-full flex justify-center">
+                <img src="logo.jpg" alt="Telecom Solutions Logo" class="h-20 object-contain drop-shadow-lg filter brightness-110">
+            </div>
+
+            <!-- Foto de Perfil -->
+            <div class="relative w-40 h-40 mb-5 group">
+                <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500 to-blue-600 rounded-full animate-pulse opacity-50 blur-md group-hover:opacity-75 transition-opacity"></div>
+                <!-- IMAGEN DE PERFIL REAL -->
+                <img src="IMG_0954.jpg" alt="Ing. Andrés" class="profile-img relative w-full h-full rounded-full border-4 border-slate-800 shadow-xl">
+            </div>
+
+            <h1 class="text-2xl font-bold text-white tracking-tight">Ing. Andrés Saavedra</h1>
+            <p class="text-sm text-cyan-400 font-semibold mb-1">Telecom Solutions Consulting</p>
+            <p class="text-xs text-slate-400 mb-6">Ingeniero de Sistemas</p>
+            
+            <!-- Botones de Contacto Real -->
+            <div class="flex gap-3 mb-8 w-full justify-center">
+                <!-- WhatsApp (Enlace real API) -->
+                <a href="https://wa.me/51938109096" target="_blank" class="w-12 h-12 rounded-full bg-green-600/20 border border-green-500/30 flex items-center justify-center text-green-400 hover:bg-green-500 hover:text-white transition-all transform hover:scale-110" title="Chat en WhatsApp">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                </a>
+                <!-- Email (Enlace real mailto) -->
+                <a href="mailto:andrassaavedra23@gmail.com" class="w-12 h-12 rounded-full bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-400 hover:bg-blue-500 hover:text-white transition-all transform hover:scale-110" title="Enviar Correo">
+                    <i class="fas fa-envelope text-xl"></i>
+                </a>
+                <!-- LinkedIn (Placeholder) -->
+                <a href="#" class="w-12 h-12 rounded-full bg-slate-600/20 border border-slate-500/30 flex items-center justify-center text-slate-400 hover:bg-slate-500 hover:text-white transition-all transform hover:scale-110">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+            </div>
+
+            <!-- Detalles de Texto -->
+            <div class="w-full text-left space-y-4 text-sm text-slate-300 bg-black/20 p-4 rounded-xl border border-white/5">
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-phone-alt text-cyan-500 w-5 text-center"></i>
+                    <span class="font-mono">938 109 096</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-at text-cyan-500 w-5 text-center"></i>
+                    <span class="font-mono text-xs">andrassaavedra23@gmail.com</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-map-marker-alt text-cyan-500 w-5 text-center"></i>
+                    <span>Chiclayo / Trujillo, Perú</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- COLUMNA DERECHA: El Curso -->
+        <div class="w-full md:w-2/3 p-8 md:p-10 bg-slate-800/30 flex flex-col">
+            
+            <div class="mb-6">
+                <div class="flex justify-between items-start">
+                    <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-bold uppercase tracking-wider border border-cyan-500/20">Nivel Intermedio</span>
+                    <!-- Pequeña referencia visual al logo -->
+                    <i class="fas fa-brain text-slate-600 text-2xl opacity-20"></i>
+                </div>
+                <h2 class="text-4xl font-bold text-white mt-4 mb-2 leading-tight">Sinergia Estratégica: <br><span class="gradient-text">IA & Automatización</span></h2>
+                <p class="text-slate-300 text-base leading-relaxed max-w-lg">
+                    Domina la integración de <strong>IA en flujos de trabajo reales</strong>. Deja la teoría básica y aprende a construir sistemas de productividad auditables y masivos.
+                </p>
+            </div>
+
+            <!-- Módulos Interactivos -->
+            <div class="space-y-3 mb-8 flex-grow">
+                
+                <div class="module-card p-4 rounded-xl bg-white/5 cursor-pointer group hover:shadow-lg" onclick="toggleDetails('mod1')">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 group-hover:text-white transition-colors">
+                                <i class="fas fa-cogs text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold text-sm group-hover:text-cyan-300 transition-colors">Ingeniería de Flujos (Workflow)</h3>
+                                <p class="text-slate-400 text-xs">Más allá del Prompt Engineering</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down text-slate-500 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <div id="mod1" class="hidden mt-3 text-slate-300 text-sm pl-16 border-t border-white/10 pt-2 leading-relaxed">
+                        Aprende la "Cadena de Valor": Ideación Humana > Estructuración IA (JSON/CSV) > Ejecución. La IA no es el fin, es el motor.
+                    </div>
+                </div>
+
+                <div class="module-card p-4 rounded-xl bg-white/5 cursor-pointer group hover:shadow-lg" onclick="toggleDetails('mod2')">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400 group-hover:text-white transition-colors">
+                                <i class="fas fa-rocket text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold text-sm group-hover:text-purple-300 transition-colors">Automatización Masiva</h3>
+                                <p class="text-slate-400 text-xs">ChatGPT + Excel + Herramientas Visuales</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down text-slate-500 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <div id="mod2" class="hidden mt-3 text-slate-300 text-sm pl-16 border-t border-white/10 pt-2 leading-relaxed">
+                        Taller "Bulk Create": Genera docenas de activos estratégicos en minutos sanitizando datos y estructurando salidas complejas.
+                    </div>
+                </div>
+
+                <div class="module-card p-4 rounded-xl bg-white/5 cursor-pointer group hover:shadow-lg" onclick="toggleDetails('mod3')">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-red-500/20 flex items-center justify-center text-red-400 group-hover:text-white transition-colors">
+                                <i class="fas fa-shield-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold text-sm group-hover:text-red-300 transition-colors">Ética y Gobernanza</h3>
+                                <p class="text-slate-400 text-xs">Human-in-the-Loop</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down text-slate-500 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <div id="mod3" class="hidden mt-3 text-slate-300 text-sm pl-16 border-t border-white/10 pt-2 leading-relaxed">
+                        Mitigación de alucinaciones y responsabilidad legal (Caso Moffatt). Auditoría de procesos automatizados.
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Call to Action -->
+            <div class="flex flex-col sm:flex-row items-center justify-between pt-6 border-t border-white/10 gap-4">
+                <div class="text-center sm:text-left">
+                    <p class="text-xs text-slate-400 uppercase tracking-widest">Próximo Grupo</p>
+                    <p class="text-white font-bold text-lg">Inscripciones Abiertas</p>
+                </div>
+                <a href="https://wa.me/51938109096?text=Hola%20Ing.%20Andrés,%20me%20interesa%20el%20curso%20de%20IA%20nivel%20Intermedio" target="_blank" class="w-full sm:w-auto bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-full shadow-lg shadow-cyan-500/20 transform transition hover:scale-105 flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                    <span>Contactar Ahora</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function toggleDetails(id) {
+            const element = document.getElementById(id);
+            const isHidden = element.classList.contains('hidden');
+            
+            // Cerrar otros (opcional, para efecto acordeón único)
+            // document.querySelectorAll('[id^="mod"]').forEach(el => el.classList.add('hidden'));
+
+            if (isHidden) {
+                element.classList.remove('hidden');
+                // Pequeña animación JS si se desea, o dejar que CSS lo maneje
+            } else {
+                element.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
